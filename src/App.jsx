@@ -5,24 +5,21 @@ import "./styles/App.css";
 import CV from "./components/CV";
 import Form from "./components/Form";
 
-const defaultPerson = {
-  name: "Cristiano Ronaldo",
-};
 function App() {
   console.log("Render");
-  const [person, setPerson] = useState(defaultPerson);
-  const onButtonClick = (person) => (e) => {
-    e.preventDefault();
-    setPerson(person);
+  const [formData, setFormData] = useState({});
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
+
   return (
     <>
-      <Form
-        clickFunction={onButtonClick({
-          name: "Lionel Messi",
-        })}
-      ></Form>
-      <CV person={person}></CV>
+      <Form onChangeFunction={handleInputChange}></Form>
+      <CV person={formData}></CV>
     </>
   );
 }

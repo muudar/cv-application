@@ -6,20 +6,20 @@ function CV(props) {
       <div className="name-field">{props.person.name}</div>
       <div className="info-field left-field">
         <div className="info-phone">
-          <IoCallSharp className="info-icon" /> 123-456-789
+          <IoCallSharp className="info-icon" /> {props.person.phoneNumber}
         </div>
         <div className="info-email">
           <IoMailSharp className="info-icon" />
-          E-Mail
+          {props.person.email}
         </div>
         <div className="info-address">
           <IoLocationSharp className="info-icon" />
-          <div>Address</div>
+          <div>{props.person.address}</div>
         </div>
       </div>
       <div className="profile-field">
         <div className="profile-header header">PROFILE</div>
-        <div className="profile-description">I am a web developer</div>
+        <div className="profile-description">{props.person.description}</div>
       </div>
       <div className="education-field left-field">
         <div className="header">Education</div>
