@@ -42,6 +42,11 @@ function Form({ onChangeFunction }) {
           height: "100px",
         }}
       ></Input>
+      <Input
+        name="skills"
+        placeholder="Skills (comma separated)"
+        onChangeFunction={onChangeFunction}
+      ></Input>
     </form>
   );
 }

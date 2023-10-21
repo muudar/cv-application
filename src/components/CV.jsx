@@ -26,6 +26,11 @@ function CV(props) {
       </div>
       <div className="skills-field">
         <div className="header">Skills</div>
+        <div className="skills-list">
+          {!props.person.skills
+            ? ""
+            : props.person.skills.split(",").map((skill) => <li>{skill}</li>)}
+        </div>
       </div>
       <div className="experience-field">
         <div className="header">Experience</div>
