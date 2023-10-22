@@ -1,14 +1,4 @@
-function Input({ name, placeholder, onChangeFunction, style }) {
-  return (
-    <input
-      name={name}
-      type="text"
-      placeholder={placeholder}
-      onChange={onChangeFunction}
-      style={style}
-    />
-  );
-}
+import Input from "./Input.jsx";
 
 function Form({ onChangeFunction }) {
   return (
