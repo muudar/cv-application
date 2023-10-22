@@ -14,8 +14,9 @@
 
 .wrapper {
   display: flex;
-  width: 80vw;
-  justify-content: center;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .CV {
@@ -104,6 +105,7 @@
 }
 
 form {
+  transition: max-height 0.3s ease-in-out, display 0.3s ease-in-out;
   width: 300px;
   margin: 0 auto;
   padding: 20px;
@@ -126,4 +128,31 @@ input {
 /* Style for the input placeholder text */
 input::placeholder {
   color: #888;
+}
+
+.field-modal-div {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.modals-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.field-modal-icon-div {
+  font-size: 28px;
 }
